@@ -6,13 +6,16 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/02 15:22:50 by hchartie          #+#    #+#             */
-/*   Updated: 2026/07/22 16:11:27 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/09/01 15:49:20 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string pName) : _name(pName) { }
+HumanB::HumanB(std::string pName) : _name(pName) 
+{
+    _weapon = NULL;
+}
 
 HumanB::~HumanB() { }
 

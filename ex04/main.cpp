@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/22 16:24:22 by hchartie          #+#    #+#             */
-/*   Updated: 2026/07/27 07:48:37 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/09/01 15:48:36 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int main(int ac, char const *av[])
 	}
    	file.open(av[1]);
  	if (!file.is_open())
+	{
 		ftPrintErr(ftStrJoin(av[1], " : file not found or don't have permission"));
+		return (0);
+	}
 	exitFile.open(ftStrJoin(av[1], ".replace").c_str());
 	line = getNextLine(file);
 	while (line.size() > 0)
